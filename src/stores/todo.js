@@ -30,7 +30,7 @@ export const useTodoStore = defineStore('todo', {
     async addTodo(todoText) {
       try {
         const resList = await axios.get(`${BASE_URL}/tasks`)
-        if (resList.data.length >= 14) {
+        if (resList.data.length >= 50) {
           return {
             success: false,
             message: 'You’ve reached the limit. Maximum of 50 tasks allowed.',
